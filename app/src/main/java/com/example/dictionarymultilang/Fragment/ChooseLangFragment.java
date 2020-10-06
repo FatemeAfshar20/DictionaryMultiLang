@@ -10,18 +10,14 @@ import android.view.ViewGroup;
 
 import com.example.dictionarymultilang.R;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link PersianFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
-public class PersianFragment extends Fragment {
-    public PersianFragment() {
+public class ChooseLangFragment extends Fragment {
+
+    public ChooseLangFragment() {
         // Required empty public constructor
     }
 
-    public static PersianFragment newInstance() {
-        PersianFragment fragment = new PersianFragment();
+    public static ChooseLangFragment newInstance() {
+        ChooseLangFragment fragment = new ChooseLangFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -36,6 +32,6 @@ public class PersianFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_persian, container, false);
+        return inflater.inflate(R.layout.fragment_choose_lang, container, false);
     }
 }

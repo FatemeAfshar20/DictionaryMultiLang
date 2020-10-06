@@ -11,7 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Activity.EnglishActivity"></activity>
         <activity android:name=".Activity.PersianActivity" />
-        <activity android:name=".Activity.FragmentContainer">
+        <activity android:name=".Activity.ChooseLanguage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

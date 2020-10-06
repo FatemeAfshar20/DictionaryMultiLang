@@ -7,17 +7,19 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 
-import com.example.dictionarymultilang.Fragment.EnglishFragment;
+import com.example.dictionarymultilang.Fragment.ChooseLangFragment;
 import com.example.dictionarymultilang.R;
 
-public class EnglishActivity extends SingleFragmentActivity {
+public class ChooseLanguage extends SingleFragmentActivity {
+
     public static void start(Context context) {
-        Intent starter = new Intent(context, EnglishActivity.class);
-        //starter.putExtra();
+        Intent starter = new Intent(context, ChooseLanguage.class);
+       // starter.putExtra();
         context.startActivity(starter);
     }
+
     @Override
     public Fragment getFragment() {
-        return EnglishFragment.newInstance();
+        return ChooseLangFragment.newInstance();
     }
 }
