@@ -37,6 +37,6 @@ public class EnglishFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_english, container, false);
+        return inflater.inflate(R.layout.all_word_view, container, false);
     }
 }

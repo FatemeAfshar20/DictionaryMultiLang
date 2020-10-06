@@ -2,4 +2,14 @@
     <string name="app_name">DictionaryMultiLang</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dictionary">Dictionary</string>
+    <string name="persian">Persian</string>
+    <string name="english">English</string>
+    <string name="count">Count :</string>
+    <string name="meaning">Meaning :</string>
+    <string name="computer">Computer :</string>
+    <string name="synonym">Synonym :</string>
+    <string name="search">Search</string>
+    <string name="delete">delete</string>
+    <string name="edit">edit</string>
 </resources>

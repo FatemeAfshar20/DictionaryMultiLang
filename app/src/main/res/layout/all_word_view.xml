@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragment.EnglishFragment"
+    >
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_light"
+        app:title="@string/dictionary"
+        android:fontFamily="@font/georgia"
+        app:menu="@menu/menu_all_word_view"
+        >
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_margin="@dimen/mrg_5"
+        />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/mrg_10"
+        android:layout_marginLeft="@dimen/mrg_10"
+        android:layout_marginTop="@dimen/mrg_10"
+        android:layout_marginEnd="@dimen/mrg_10"
+        android:layout_marginRight="@dimen/mrg_10"
+        android:layout_marginBottom="@dimen/mrg_10"
+        android:backgroundTint="#ffffff"
+        android:scrollbarThumbHorizontal="@drawable/add_btn"
+        android:scrollbarThumbVertical="@drawable/add_btn"
+        android:src="@drawable/add_btn"
+        app:backgroundTint="#00FFFFFF"
+        app:maxImageSize="45dp"
+        app:rippleColor="#00FFFFFF" />
+
+</RelativeLayout>
