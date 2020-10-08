@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">فرهنگ لغت</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="dictionary">فرهنگ لغت</string>
+    <string name="persian">فارسی</string>
+    <string name="english">انگلیسی</string>
+    <string name="count">تعداد : </string>
+    <string name="meaning">معنی : </string>
+    <string name="computer">کامپیوتر</string>
+    <string name="synonym">هم معنی : </string>
+    <string name="search">جستجو</string>
+    <string name="delete">پاک کردن</string>
+    <string name="edit">ویرایش</string>
+    <string name="word">لغت : </string>
+    <string name="share">به اشتراک گذاری</string>
+
+    <string name="word_info">
+         لقت :%1$s   معنی لقت : %2$s  هم معنی : %3$s
+    </string>
+</resources>

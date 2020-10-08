@@ -15,23 +15,25 @@ import android.view.ViewGroup;
 
 import com.example.dictionarymultilang.Adapter.WordViewAdapter;
 import com.example.dictionarymultilang.Database.Repository.EnglishDBRepository;
+import com.example.dictionarymultilang.Database.Repository.IRepository;
+import com.example.dictionarymultilang.Model.EnglishWords;
 import com.example.dictionarymultilang.R;
-import com.google.android.material.button.MaterialButton;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
-public class EnglishFragment extends Fragment {
+public class WordViewFragment extends Fragment {
     public static final String FRAGMENT_ADD_WORD = "Add Word";
     public static final int REQUEST_CODE_ADD_DIALOG = 1;
     private RecyclerView mRecyclerView;
     private FloatingActionButton mButtonAdd;
     private WordViewAdapter mAdapter;
-    private EnglishDBRepository mEnglishDBRepository;
-    public EnglishFragment() {
+    private IRepository<EnglishWords> mEnglishDBRepository;
+
+    public WordViewFragment() {
         // Required empty public constructor
     }
 
-    public static EnglishFragment newInstance() {
-        EnglishFragment fragment = new EnglishFragment();
+    public static WordViewFragment newInstance(String language) {
+        WordViewFragment fragment = new WordViewFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
         return fragment;
@@ -86,7 +88,7 @@ public class EnglishFragment extends Fragment {
                         AddDialogFragment.newInstance();
 
                 addDialogFragment.setTargetFragment(
-                        EnglishFragment.this, REQUEST_CODE_ADD_DIALOG);
+                        WordViewFragment.this, REQUEST_CODE_ADD_DIALOG);
 
                 addDialogFragment.show(
                         getActivity().getSupportFragmentManager(),

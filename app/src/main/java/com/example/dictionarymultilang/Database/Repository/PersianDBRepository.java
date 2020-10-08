@@ -8,6 +8,7 @@ import com.example.dictionarymultilang.Database.DAO.PersianDAO;
 import com.example.dictionarymultilang.Database.DictionaryDatabase;
 import com.example.dictionarymultilang.Database.DictionarySchema;
 import com.example.dictionarymultilang.Model.PersianWords;
+import com.example.dictionarymultilang.Model.PersianWords;
 
 import java.util.List;
 import java.util.UUID;

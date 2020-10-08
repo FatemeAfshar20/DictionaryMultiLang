@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Controller.Activity.WordPageViewActivity"></activity>
-        <activity android:name=".Controller.Activity.EnglishActivity" />
+        <activity android:name=".Controller.Activity.WordViewActivity" />
         <activity android:name=".Controller.Activity.PersianActivity" />
         <activity android:name=".Controller.Activity.ChooseLanguage">
             <intent-filter>

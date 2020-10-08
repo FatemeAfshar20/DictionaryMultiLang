@@ -12,24 +12,19 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.dictionarymultilang.Database.Repository.EnglishDBRepository;
+import com.example.dictionarymultilang.Database.Repository.IRepository;
 import com.example.dictionarymultilang.Model.EnglishWords;
 import com.example.dictionarymultilang.View.DialogView;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link AddDialogFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class AddDialogFragment extends DialogFragment {
     public static final String EXTRA_NEW_WORD = "com.example.dictionarymultilang.new word";
     private DialogView mDialogView;
     private EnglishWords mEnglishWords=new EnglishWords();
-    private EnglishDBRepository mEnglishDBRepository;
+    private IRepository<EnglishWords> mEnglishRepository;
     public AddDialogFragment() {
         // Required empty public constructor
     }
 
-    // TODO: Rename and change types and number of parameters
     public static AddDialogFragment newInstance() {
         AddDialogFragment fragment = new AddDialogFragment();
         Bundle args = new Bundle();
@@ -40,16 +35,7 @@ public class AddDialogFragment extends DialogFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-/*        String languageToLoad  = "fa"; // your language
-        Locale locale = new Locale(languageToLoad);
-        Locale.setDefault(locale);
-        Configuration config = new Configuration();
-        config.locale = locale;
-        getActivity().getBaseContext().getResources().updateConfiguration(config,
-               getActivity().getBaseContext().getResources().getDisplayMetrics());
-        getActivity().setContentView(R.layout.fragment_dialog);*/
-        mEnglishDBRepository=
-                EnglishDBRepository.getInstance(getContext());
+        mEnglishRepository =EnglishDBRepository.getInstance(getContext());
     }
 
     @Override
@@ -66,7 +52,7 @@ public class AddDialogFragment extends DialogFragment {
             @Override
             public void onClick(View v) {
                 mEnglishWords=returnNewWord();
-                mEnglishDBRepository.insert(mEnglishWords);
+                mEnglishRepository.insert(mEnglishWords);
                 sendData(mEnglishWords);
                 dismiss();
             }

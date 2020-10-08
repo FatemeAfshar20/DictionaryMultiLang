@@ -2,10 +2,7 @@ package com.example.dictionarymultilang.Database.Repository;
 
 import androidx.room.Delete;
 import androidx.room.Insert;
-import androidx.room.Query;
 import androidx.room.Update;
-
-import com.example.dictionarymultilang.Model.EnglishWords;
 
 import java.util.List;
 import java.util.UUID;

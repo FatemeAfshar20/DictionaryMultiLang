@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.dictionarymultilang.Controller.Activity.EnglishActivity;
+import com.example.dictionarymultilang.Controller.Activity.WordViewActivity;
 import com.example.dictionarymultilang.Controller.Activity.PersianActivity;
 import com.example.dictionarymultilang.View.ChooseLangView;
 
@@ -43,14 +43,14 @@ public class ChooseLangFragment extends Fragment {
         mView.getButtonEnglish().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                EnglishActivity.start(getActivity());
+                WordViewActivity.start(getActivity(),"English");
             }
         });
 
         mView.getButtonPersian().setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PersianActivity.start(getActivity());
+              //  WordViewActivity.start(getActivity(),"Persian");
             }
         });
     }

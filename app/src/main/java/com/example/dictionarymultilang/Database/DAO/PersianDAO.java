@@ -11,8 +11,9 @@ import java.util.List;
 import java.util.UUID;
 @Dao
 public interface PersianDAO extends IRepository<PersianWords> {
-    @Query(value = "SELECT * FROM PersianWords")
+    @Query(value = "SELECT * FROM persianwords")
     List<PersianWords> getLists();
-    @Query(value = "SELECT * FROM PersianWords WHERE uuid=:id")
+    @Query(value = "SELECT * FROM persianwords WHERE uuid=:id")
     PersianWords get(UUID id);
 }
+

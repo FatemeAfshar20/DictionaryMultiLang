@@ -7,7 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
+import androidx.core.app.ShareCompat;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
@@ -25,7 +25,7 @@ import com.example.dictionarymultilang.View.WordPageView;
 
 import java.util.UUID;
 
-public class WordPageFragment extends Fragment {
+public class WordPageViewFragment extends Fragment {
     public static final String ARG_WORD_ID = "Word Id";
     public static final int REQUEST_CODE_EDIT = 1;
     public static final String FRAGMENT_EDIT_FRAGMENT = "Edit Fragment";
@@ -34,12 +34,12 @@ public class WordPageFragment extends Fragment {
     private EnglishWords mWord;
     private UUID mWordId;
 
-    public WordPageFragment() {
+    public WordPageViewFragment() {
         // Required empty public constructor
     }
 
-    public static WordPageFragment newInstance(UUID wordId) {
-        WordPageFragment fragment = new WordPageFragment();
+    public static WordPageViewFragment newInstance(UUID wordId) {
+        WordPageViewFragment fragment = new WordPageViewFragment();
         Bundle args = new Bundle();
         args.putSerializable(ARG_WORD_ID,wordId);
         fragment.setArguments(args);
@@ -94,7 +94,7 @@ public class WordPageFragment extends Fragment {
                 EditFragment editFragment=
                         EditFragment.newInstance(mWordId);
 
-                editFragment.setTargetFragment(WordPageFragment.this
+                editFragment.setTargetFragment(WordPageViewFragment.this
                         , REQUEST_CODE_EDIT);
 
                 editFragment.show(
@@ -104,6 +104,14 @@ public class WordPageFragment extends Fragment {
             case R.id.menu_delete_word:
                 mEnglishRepository.delete(mWord);
                 getActivity().finish();
+                return true;
+            case R.id.menu_share_word:
+                Intent intent=ShareCompat.IntentBuilder.
+                        from(getActivity()) .setType("text/plain").
+                        setText(getWord(mWord)).getIntent();
+
+                if(intent.resolveActivity(getActivity().getPackageManager())!=null)
+                    startActivity(intent);
                 return true;
             default:
                 return false;
@@ -115,5 +123,12 @@ public class WordPageFragment extends Fragment {
         mView.setWordView(word.getWord());
         mView.setMeaning(word.getMeaning());
         mView.setSynonym(word.getSynonym());
+    }
+
+    private String getWord(EnglishWords word){
+        return getString(R.string.word_info,
+                word.getWord(),
+                word.getMeaning(),
+                word.getSynonym());
     }
 }

@@ -1,14 +1,11 @@
 package com.example.dictionarymultilang.Controller.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 
-import com.example.dictionarymultilang.Controller.Fragment.WordPageFragment;
-import com.example.dictionarymultilang.R;
+import com.example.dictionarymultilang.Controller.Fragment.WordPageViewFragment;
 
 import java.util.UUID;
 
@@ -30,6 +27,6 @@ public class WordPageViewActivity extends SingleFragmentActivity {
         UUID id= (UUID) intent
                 .getSerializableExtra(EXTRA_WORD_ID);
 
-        return WordPageFragment.newInstance(id);
+        return WordPageViewFragment.newInstance(id);
     }
 }
