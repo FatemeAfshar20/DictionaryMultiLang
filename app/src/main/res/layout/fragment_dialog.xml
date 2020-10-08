@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Controller.Fragment.AddDialogFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/add_word_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/mrg_10"
+        android:fontFamily="@font/georgia"
+        android:padding="@dimen/pad_5"
+        android:text="@string/word"
+        android:textColor="@color/purple"
+        android:textSize="@dimen/textsize_20" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/add_word"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_toEndOf="@+id/add_word_view"
+        android:layout_toRightOf="@+id/add_word_view"
+        android:layout_margin="@dimen/mrg_10"
+        android:fontFamily="@font/georgia"
+        android:padding="@dimen/pad_5"
+        android:textColor="#000000"
+        android:textSize="@dimen/textsize_20"
+     />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/add_meaning_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_word"
+        android:layout_margin="@dimen/mrg_10"
+        android:fontFamily="@font/georgia"
+        android:padding="@dimen/pad_5"
+        android:text="@string/meaning"
+        android:textColor="@color/purple"
+        android:textSize="@dimen/textsize_20" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/add_meaning"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_word"
+        android:layout_margin="@dimen/mrg_10"
+        android:layout_toEndOf="@+id/add_meaning_view"
+        android:layout_toRightOf="@+id/add_meaning_view"
+        android:fontFamily="@font/georgia"
+        android:padding="@dimen/pad_5"
+        android:textColor="#000000"
+        android:textSize="@dimen/textsize_20"
+/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/add_synonym_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_meaning"
+        android:layout_margin="@dimen/mrg_5"
+        android:fontFamily="@font/georgia"
+        android:padding="@dimen/pad_5"
+        android:text="@string/synonym"
+        android:textColor="@color/purple"
+        android:textSize="@dimen/textsize_20" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/add_synonym"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_meaning"
+        android:layout_margin="@dimen/mrg_10"
+        android:layout_toEndOf="@+id/add_meaning_view"
+        android:layout_toRightOf="@+id/add_meaning_view"
+        android:fontFamily="@font/georgia"
+        android:padding="@dimen/pad_5"
+        android:textColor="#000000"
+        android:textSize="@dimen/textsize_20" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_ok"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_synonym"
+        android:layout_alignParentRight="true"
+        android:layout_margin="@dimen/mrg_10"
+        android:fontFamily="@font/georgia"
+        android:text="OK"
+        android:textAllCaps="false" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_cancel"
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/add_synonym"
+        android:layout_margin="@dimen/mrg_10"
+        android:layout_toStartOf="@+id/btn_ok"
+        android:layout_toLeftOf="@+id/btn_ok"
+        android:fontFamily="@font/georgia"
+        android:text="Cancel"
+        android:textAllCaps="false" />
+
+</RelativeLayout>

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Fragment.EnglishFragment"
+    tools:context=".Controller.Fragment.EnglishFragment"
     >
 
     <com.google.android.material.appbar.MaterialToolbar
@@ -21,13 +21,14 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/toolbar"
         android:layout_margin="@dimen/mrg_5"
         />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/btn_add"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"

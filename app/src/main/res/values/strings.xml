@@ -12,4 +12,5 @@
     <string name="search">Search</string>
     <string name="delete">delete</string>
     <string name="edit">edit</string>
+    <string name="word">Word :</string>
 </resources>

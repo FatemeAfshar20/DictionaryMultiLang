@@ -1,14 +1,11 @@
-package com.example.dictionarymultilang.Activity;
+package com.example.dictionarymultilang.Controller.Activity;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 
-import com.example.dictionarymultilang.Fragment.PersianFragment;
-import com.example.dictionarymultilang.R;
+import com.example.dictionarymultilang.Controller.Fragment.PersianFragment;
 
 public class PersianActivity extends SingleFragmentActivity {
 

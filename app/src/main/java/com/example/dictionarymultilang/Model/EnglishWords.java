@@ -1,5 +1,7 @@
 package com.example.dictionarymultilang.Model;
 
+import android.app.SearchableInfo;
+
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.Ignore;
@@ -7,10 +9,11 @@ import androidx.room.PrimaryKey;
 
 import com.example.dictionarymultilang.Database.DictionarySchema.Columns;
 
+import java.io.Serializable;
 import java.util.UUID;
 
 @Entity
-public class EnglishWords {
+public class EnglishWords implements Serializable {
     @PrimaryKey(autoGenerate = true)
     private long mId;
     @ColumnInfo(name = Columns.UUID)

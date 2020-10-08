@@ -9,9 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Activity.EnglishActivity"></activity>
-        <activity android:name=".Activity.PersianActivity" />
-        <activity android:name=".Activity.ChooseLanguage">
+        <activity android:name=".Controller.Activity.WordPageViewActivity"></activity>
+        <activity android:name=".Controller.Activity.EnglishActivity" />
+        <activity android:name=".Controller.Activity.PersianActivity" />
+        <activity android:name=".Controller.Activity.ChooseLanguage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

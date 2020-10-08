@@ -1,14 +1,11 @@
-package com.example.dictionarymultilang.Activity;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
+package com.example.dictionarymultilang.Controller.Activity;
 
 import android.content.Context;
 import android.content.Intent;
-import android.os.Bundle;
 
-import com.example.dictionarymultilang.Fragment.EnglishFragment;
-import com.example.dictionarymultilang.R;
+import androidx.fragment.app.Fragment;
+
+import com.example.dictionarymultilang.Controller.Fragment.EnglishFragment;
 
 public class EnglishActivity extends SingleFragmentActivity {
     public static void start(Context context) {

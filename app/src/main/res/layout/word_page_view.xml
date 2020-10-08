@@ -3,13 +3,25 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
-    android:background="#f1f1f1"
-    >
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="#f1f1f1">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar_word_page"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/purple_light"
+        app:title="Word Details"
+        android:fontFamily="@font/georgia"
+        app:menu="@menu/menu_word_page"
+        >
+    </com.google.android.material.appbar.MaterialToolbar>
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/word"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar_word_page"
         android:layout_margin="@dimen/mrg_5"
         android:padding="@dimen/pad_5"
         android:textSize="@dimen/textsize_25"

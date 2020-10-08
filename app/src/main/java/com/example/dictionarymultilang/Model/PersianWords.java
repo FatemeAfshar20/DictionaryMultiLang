@@ -5,9 +5,11 @@ import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 
 import com.example.dictionarymultilang.Database.DictionarySchema.Columns;
+
+import java.io.Serializable;
 import java.util.UUID;
 @Entity
-public class PersianWords {
+public class PersianWords implements Serializable {
     @PrimaryKey(autoGenerate = true)
     private long mId;
     @ColumnInfo(name = Columns.UUID)

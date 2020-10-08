@@ -1,4 +1,4 @@
-package com.example.dictionarymultilang.Activity;
+package com.example.dictionarymultilang.Controller.Activity;
 
 import android.os.Bundle;
 
@@ -15,16 +15,11 @@ public abstract class SingleFragmentActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        //inflate layout for activity
         setContentView(R.layout.container);
 
         FragmentManager fragmentManager = getSupportFragmentManager();
-
-        //check if fragment exists in container (configuration changes save the fragments)
         Fragment fragment = fragmentManager.findFragmentById(R.id.fragment_container);
 
-        //create an add fragment transaction for CrimeDetailFragment
         if (fragment == null) {
             fragmentManager
                     .beginTransaction()
